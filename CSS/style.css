@@ -1,0 +1,263 @@
+:root{
+    --primario: #2bb871;
+    --azuloscuro: #4987c0;
+    --secundario: #d0ee28;
+    --secundarioOscuro:#9ab406;
+    --blanco: #ffffff;
+    --negro: #bcbfc0;
+    --fuenteprincipal: 'Mitr'   ,cursive;
+    --azulclaro: #0f1111;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1;
+    /*background-image: linear-gradient(to bottom, var(--negro) 0%, var(--blanco) 100%);*/
+    background-color: var(--negro);
+}
+
+p{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,h2,h3{
+    text-align: center;
+    font-weight: bold;
+    color: var(--azulclaro);
+    font-family: var(--fuenteprincipal);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.2rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+/* header*/
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+.header__logo{
+    margin: 3rem 0;
+}
+
+.footer{
+    background-color: var(--negro);
+    padding: 1rem 0;
+    margin-top:2rem;
+
+}
+
+.footer__texto{
+    font-family: var(--fuenteprincipal);
+    text-align: center;
+    font-size: 2.2.rem;
+    color: #0f1111;
+    font-weight: bold;
+}
+
+.navegacion{
+    background-color: var(--azulclaro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    /*gap: 2rem; */ /*separacion nuevo comando pero no soportado aun por todos*/
+
+}
+.navegacion__enlace{
+    color: var(--blanco);
+    font-family:var(--fuenteprincipal);
+    font-size: 3rem; 
+    margin-left: 2rem; 
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+     color: var(--secundario);
+}
+
+/*Grid*/
+
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+/*productos*/
+
+.producto{
+    background-color: var(--azuloscuro);
+    padding: 1.7rem;
+}
+
+.producto__imagen{
+    width: 100%;
+    border-radius: 7%;
+
+}
+
+.producto__nombre{
+    font-size: 3rem;
+    
+}
+
+.producto__precio{
+    font-size: 2.4rem;
+    color: yellow;
+    font-weight: bold;
+
+}
+.producto__nombre,
+.producto__precio{
+    font-family: var(--fuenteprincipal);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/*graficos*/
+
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.grafico--camisas{
+    background-image: url(/imagenes/grafico1.jpg);
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    border-radius: 6%;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, .7);
+}
+
+
+.grafico--node{
+    background-image: url(/imagenes/grafico2.jpg);
+    grid-row: 8 / 9;
+    grid-column: 1 / 3;
+    border-radius: 6%;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, .7);
+}
+
+@media (min-width: 768px) {
+    .grafico--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;    
+    }
+}
+
+
+
+/*nosotros*/
+
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2,auto);   
+}
+
+
+@media (min-width:768px) {
+    .nosotros{
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    }
+        
+}
+.nosotros__contenido p{
+    justify-content: baseline;
+    color: black;
+}
+
+.nosotros__imagen{
+   grid-row: 1 / 2;
+   width: 100%;
+   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .nosotros__imagen{
+        grid-column: 2 / 3;
+    }
+}
+
+/*bloques*/
+
+.bloques{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 2rem;
+
+}
+
+@media (min-width: 400px) {
+    .bloques{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .bloques{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.bloque{
+    text-align: center;
+   color: black;
+}
+
+.bloque__parrafos{
+    color: black;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
